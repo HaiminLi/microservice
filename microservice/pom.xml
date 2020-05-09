@@ -10,9 +10,9 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>rain-commons</module>
     <module>rain-order-8000</module>
     <module>rain-product-8010</module>
+      <module>rain-user-8020</module>
   </modules>
 
   <properties>

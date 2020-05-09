@@ -1,0 +1,14 @@
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: rain-order-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.1.18.102:8848
+        file-extension: yaml
+        group: rain_order
+      discovery:
+        server-addr: 10.1.18.102:8848

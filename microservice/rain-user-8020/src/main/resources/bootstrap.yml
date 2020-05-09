@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: rain-user-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.1.18.102:8848
+        file-extension: yaml
+        group: rain_user
+      discovery:
+        server-addr: 10.1.18.102:8848
