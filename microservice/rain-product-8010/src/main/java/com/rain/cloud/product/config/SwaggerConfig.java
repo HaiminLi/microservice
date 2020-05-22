@@ -1,4 +1,4 @@
-package com.rain.cloud.order.config;
+package com.rain.cloud.product.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ public class SwaggerConfig {
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
-				.title("订单工程 API")
+				.title("商品服务 API")
 				.description(initContextInfo())
 				.termsOfServiceUrl("XXXXXXXXXXXX")
 				.contact("陪你度过漫长的岁月")
@@ -27,9 +27,9 @@ public class SwaggerConfig {
 
 	private String initContextInfo() {
 		StringBuffer sb = new StringBuffer();
-		sb.append("以下是系统提供的RESTful APIs。").append("<br/>")
+		sb.append("以下是系统提供的RESTful API").append("<br/>")
 				.append("<font color='red'>请注意与后端交互时直接使用域名加上服务名不要指定端口。</font>").append("<br/>")
-				.append("例：访问/bind接口时，完整访问路径为http://ip:port(或域名)/rain-order-service/bind");
+				.append("例：访问/bind接口时，完整访问路径为http://ip:port(或域名)/rain-product-service/bind");
 		return sb.toString();
 	}
 
@@ -38,7 +38,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.rain.cloud"))// 扫描该包下的所有需要在Swagger中展示的API，@ApiIgnore注解标注的除外
+                .apis(RequestHandlerSelectors.basePackage("com.rain.cloud.product"))// 扫描该包下的所有需要在Swagger中展示的API，@ApiIgnore注解标注的除外
                 .paths(PathSelectors.any())
                 .build();
 	}

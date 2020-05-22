@@ -1,15 +1,2 @@
 server:
   port: 8020
-spring:
-  application:
-    name: rain-user-service
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://192.168.44.128:3306/rain_user?useUnicode=true&characterEncoding=utf-8&useSSl=false
-    username: root
-    password: 123456
-
-mybatis:
-  type-aliases-package: com.rain.cloud.entity.user.dto
-  mapper-locations: classpath*:sqlmapper/*.xml
